@@ -1,0 +1,16 @@
+-TaskFlow Project-
+
+--------------------------
+1. Tech Used
+--------------------------
+
+ASP.NET Core WEB API
+React + Axios
+Use BCrypt for hashing password
+Content Security Policy (CSP)
+
+
+--------------------------
+2. 
+--------------------------
+
