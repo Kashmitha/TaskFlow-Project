@@ -1,19 +1,19 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TaskFlow.API.DTOs;
 using TaskFlow.API.Data;
+using TaskFlow.API.DTOs;
 
 namespace TaskFlow.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class UserController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public UserController(ApplicationDbContext context)
+        public UsersController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -30,18 +30,19 @@ namespace TaskFlow.API.Controllers
                     Email = u.Email,
                     Role = u.Role,
                     CreatedAt = u.CreatedAt
-                }).ToListAsync();
-                
+                })
+                .ToListAsync();
+
             return Ok(users);
         }
 
         // GET: api/users/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserResponseDto>> GetUsers(int id)
+        public async Task<ActionResult<UserResponseDto>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
 
-            if(user == null)
+            if (user == null)
             {
                 return NotFound();
             }

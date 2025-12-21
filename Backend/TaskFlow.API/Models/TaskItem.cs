@@ -23,8 +23,8 @@ namespace TaskFlow.API.Models
         [MaxLength(20)]
         public string Priority { get; set; } = "Medium"; // Low, Medium, High
 
-        public DateTime? DueDate {get;set;}
-        
+        public DateTime? DueDate { get; set; }
+
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Foreign Keys

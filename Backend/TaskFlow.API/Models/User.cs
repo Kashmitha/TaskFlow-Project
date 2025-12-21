@@ -21,7 +21,7 @@ namespace TaskFlow.API.Models
 
         [Required]
         [MaxLength(20)]
-        public string Role { get; set; } = "User"; // Admin or User, default is User
+        public string Role { get; set; } = "User"; // Admin or User
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 

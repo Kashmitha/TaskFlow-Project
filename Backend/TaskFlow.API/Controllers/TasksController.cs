@@ -55,7 +55,7 @@ namespace TaskFlow.API.Controllers
             return Ok(tasks);
         }
 
-        // GET: api/tasks/5
+        // GET: api/tasks/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<TaskResponseDto>> GetTask(int id)
         {
