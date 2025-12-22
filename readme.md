@@ -2,7 +2,7 @@
 
 
 
-!\[TaskFlow Banner](./Images/banner.png)
+!\[TaskFlow Banner](Images/banner.png)
 
 
 
@@ -18,6 +18,8 @@ TaskFlow is a full-stack task management system that allows users to create, man
 
 🚧 Coming soon
 
+
+
 ---
 
 
@@ -26,13 +28,29 @@ TaskFlow is a full-stack task management system that allows users to create, man
 
 
 
-!\[Login Page](./Images/login.png)
+\### Login Page
 
-!\[Register Page](./Images/register.png)
+!\[Login Page](Images/login.png)
 
-!\[Dashboard](./Images/dashboard.png)
 
-!\[Task Create](./Images/create.png)
+
+\### Register Page
+
+!\[Register Page](Images/register.png)
+
+
+
+\### Dashboard
+
+!\[Dashboard](Images/dashboard.png)
+
+
+
+\### Create Task
+
+!\[Task Create](Images/create.png)
+
+
 
 ---
 
@@ -40,7 +58,7 @@ TaskFlow is a full-stack task management system that allows users to create, man
 
 \## 🎥 Demo Video
 
-▶️ 
+▶️ Coming soon
 
 
 
@@ -72,7 +90,7 @@ TaskFlow is a full-stack task management system that allows users to create, man
 
 
 
-\*\*Frontend\*\*
+\### Frontend
 
 \- React
 
@@ -84,7 +102,7 @@ TaskFlow is a full-stack task management system that allows users to create, man
 
 
 
-\*\*Backend\*\*
+\### Backend
 
 \- ASP.NET Core 8
 
@@ -94,13 +112,13 @@ TaskFlow is a full-stack task management system that allows users to create, man
 
 
 
-\*\*Database\*\*
+\### Database
 
 \- SQL Server
 
 
 
-\*\*Authentication\*\*
+\### Authentication
 
 \- JWT
 
