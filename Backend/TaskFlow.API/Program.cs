@@ -45,8 +45,6 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins(
-                "http://localhost:3000",
-                "https://localhost:3000",
                 "https://task-flow-project-cwzpuo9yl-kashmithas-projects.vercel.app"
             )
             .AllowAnyHeader()
