@@ -44,8 +44,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins(
-                "https://task-flow-project-cwzpuo9yl-kashmithas-projects.vercel.app"
+            policy.SetIsOriginAllowed(origin => 
+                origin.StartsWith("http://localhost") || 
+                origin.EndsWith(".vercel.app") ||
+                origin.EndsWith("azurewebsites.net")
             )
             .AllowAnyHeader()
             .AllowAnyMethod()

@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL;
+// Get API URL from environment
+const API_URL = import.meta.env.VITE_API_URL || 'https://taskflow-api-kashmitha-gvdneqgkc2hpdbh7.eastasia-01.azurewebsites.net/api';
+
+console.log('API_URL:', API_URL); // Debug: Check what URL is being used
 
 const api = axios.create({
     baseURL: API_URL,

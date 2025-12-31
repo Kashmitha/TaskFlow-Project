@@ -6,13 +6,6 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    proxy: {
-      '/api': {
-        target: 'https://taskflow-api-kashmitha-gvdneqgkc2hpdbh7.eastasia-01.azurewebsites.net',
-        changeOrigin: true,
-        secure: false,
-      }
-    }
   },
   build: {
     outDir: 'dist',
