@@ -41,7 +41,7 @@ const authService = {
     try {
       const decoded = jwtDecode(token);
       return decoded.exp < Date.now() / 1000;
-    } catch (error) {
+    } catch {
       return true;
     }
   },
