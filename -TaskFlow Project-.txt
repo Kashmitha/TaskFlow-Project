@@ -11,6 +11,12 @@ Content Security Policy (CSP)
 
 
 --------------------------
-2. 
+2. Deploy with Azure
 --------------------------
 
+Admin Login - taskflowadmin
+Password - TaskFlow@2025!
+
+Server=tcp:taskflow-server-kashmitha.database.windows.net,1433;Initial Catalog=TaskFlowDB;Persist Security Info=False;User ID=taskflowadmin;Password=TaskFlow@2025!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+["eastasia","centralindia","malaysiawest","indonesiacentral","uaenorth"]

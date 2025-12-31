@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -17,17 +16,14 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
-    // For better CSP compatibility
+    sourcemap: false,
     minify: 'terser',
-    terserOptions: {
-      compress: { 
-        drop_console: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        },
       },
     },
   },
-  // For prevent eval usage
-  define: {
-    'process.env': {}
-  }
 })

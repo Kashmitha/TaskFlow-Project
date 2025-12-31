@@ -12,7 +12,7 @@ using TaskFlow.API.Data;
 namespace TaskFlow.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251216085151_InitialCreate")]
+    [Migration("20251231055640_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace TaskFlow.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0")
+                .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
