@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net9.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/ca1c15b4-c08c-4eb6-a8cb-221ce46ac31c/resourceGroups/TaskFlow-RG/providers/Microsoft.Web/sites/taskflow-api-kashmitha"
+}

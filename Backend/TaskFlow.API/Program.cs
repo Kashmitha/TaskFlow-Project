@@ -11,14 +11,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container
 builder.Services.AddControllers();
 
-// Database Configuration
+// Database Configuration - READS FROM AZURE CONNECTION STRING
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
 
 // Authentication Service
 builder.Services.AddScoped<IAuthService, AuthService>();
 
-// JWT Authentication
+// JWT Authentication - READS FROM AZURE APP SETTINGS
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -35,7 +37,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// CORS Configuration - UPDATE THIS
+// CORS Configuration - UPDATE WITH YOUR VERCEL URL LATER
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
@@ -44,7 +46,6 @@ builder.Services.AddCors(options =>
             policy.WithOrigins(
                 "http://localhost:3000",
                 "https://localhost:3000",
-                "https://your-app.vercel.app",  // Will update this later
                 "https://*.vercel.app"
             )
             .AllowAnyHeader()
@@ -53,16 +54,14 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Swagger Configuration
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "TaskFlow API", Version = "v1" });
     
-    // Add JWT Authentication to Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "JWT Authorization header using the Bearer scheme. Enter 'Bearer' [space] and then your token.",
+        Description = "JWT Authorization header using the Bearer scheme.",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
@@ -88,14 +87,13 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
+// IMPORTANT: CORS must be before Authentication
 app.UseCors("AllowReactApp");
 
 app.UseAuthentication();

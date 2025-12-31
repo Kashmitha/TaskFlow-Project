@@ -20,3 +20,26 @@ Password - TaskFlow@2025!
 Server=tcp:taskflow-server-kashmitha.database.windows.net,1433;Initial Catalog=TaskFlowDB;Persist Security Info=False;User ID=taskflowadmin;Password=TaskFlow@2025!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 
 ["eastasia","centralindia","malaysiawest","indonesiacentral","uaenorth"]
+
+Server=tcp:taskflow-server-kashmitha.database.windows.net,1433;Initial Catalog=TaskFlowDB;User ID=taskflowadmin;Password=TaskFlow@2025!;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+
+az role assignment list --scope "/subscriptions/xxxx/resourceGroups/TaskFlow-RG" --output table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
