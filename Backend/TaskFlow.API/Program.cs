@@ -46,8 +46,7 @@ builder.Services.AddCors(options =>
         {
             policy.SetIsOriginAllowed(origin => 
                 origin.StartsWith("http://localhost") || 
-                origin.EndsWith(".vercel.app") ||
-                origin.EndsWith("azurewebsites.net")
+                origin.Contains(".vercel.app")
             )
             .AllowAnyHeader()
             .AllowAnyMethod()

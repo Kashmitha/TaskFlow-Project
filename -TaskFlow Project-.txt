@@ -27,6 +27,8 @@ Server=tcp:taskflow-server-kashmitha.database.windows.net,1433;Initial Catalog=T
 az role assignment list --scope "/subscriptions/xxxx/resourceGroups/TaskFlow-RG" --output table
 
 
+https://taskflow-api-kashmitha-gvdneqgkc2hpdbh7.eastasia-01.azurewebsites.net
+https://task-flow-project-elhqiiyon-kashmithas-projects.vercel.app
 
 
 
