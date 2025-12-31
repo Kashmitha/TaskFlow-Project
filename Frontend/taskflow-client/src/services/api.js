@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API__URL || 'http://localhost:5110/api';
+const API_URL = import.meta.env.VITE_API__URL || 'https://taskflow-api-kashmitha-gvdneqgkc2hpdbh7.eastasia-01.azurewebsites.net';
 
 const api = axios.create({
     baseURL: API_URL,

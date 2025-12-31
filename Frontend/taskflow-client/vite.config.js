@@ -8,7 +8,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'https://localhost:5110',
+        target: 'https://taskflow-api-kashmitha-gvdneqgkc2hpdbh7.eastasia-01.azurewebsites.net',
         changeOrigin: true,
         secure: false,
       }
