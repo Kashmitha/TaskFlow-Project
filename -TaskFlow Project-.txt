@@ -31,6 +31,50 @@ https://taskflow-api-kashmitha-gvdneqgkc2hpdbh7.eastasia-01.azurewebsites.net
 https://task-flow-project-elhqiiyon-kashmithas-projects.vercel.app
 
 
+Today, TaskFlow is LIVE! 🎉
+🚀 Excited to share my latest project: TaskFlow - Full-Stack Task Management System
+
+I'm thrilled to announce the completion and deployment of TaskFlow, a production-ready web application I built to demonstrate my full-stack development capabilities.
+
+💻 What I Built:
+TaskFlow is a comprehensive task management system that allows teams to create, assign, and track tasks with real-time updates and secure user authentication.
+
+🛠️ Tech Stack:
+- Frontend: React 18 + Vite, React Router, Axios
+- Backend: ASP.NET Core 8 Web API
+- Database: Azure SQL Server
+- Authentication: JWT + BCrypt
+- Deployment: Azure App Service + Vercel
+- API Documentation: Swagger/OpenAPI
+
+✨ Key Features:
+- Secure user authentication and authorization
+- Role-based access control (Admin/User)
+- Complete CRUD operations for task management
+- Task assignment and real-time status tracking
+- Priority-based organization (Low/Medium/High)
+- Responsive design for all devices
+- RESTful API architecture
+
+🎯 Technical Highlights:
+- Implemented JWT-based authentication with BCrypt password hashing
+- Designed normalized database schema with proper relationships
+- Built 15+ RESTful API endpoints with proper error handling
+- Created reusable React components with Context API
+- Deployed to Azure cloud infrastructure with CI/CD
+- Configured CORS and security best practices
+
+💡 What I Learned:
+This project pushed me to master both frontend and backend development, cloud deployment, database design, and production-level security practices.
+
+🔗 Live Demo: [Your Vercel URL]
+🔗 API Documentation: [Your Azure Swagger URL]
+📂 GitHub: [Your GitHub Repo]
+
+Open to opportunities in full-stack development! Feel free to test the live demo and share your feedback.
+
+#WebDevelopment #FullStack #React #DotNet #ASPNETCore #Azure #CloudComputing #SoftwareEngineering #Programming #WebDesign #OpenToWork
+
 
 
 
