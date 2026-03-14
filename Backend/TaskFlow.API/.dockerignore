@@ -1,0 +1,19 @@
+ Visual Studio artifacts
+.vs/
+*.suo
+*.user
+
+# Build outputs (let Docker build fresh)
+bin/
+obj/
+
+# NuGet local cache
+packages/
+*.nupkg
+
+# Git
+.git/
+.gitignore
+
+# Solution file
+*.sln
