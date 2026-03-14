@@ -44,8 +44,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.SetIsOriginAllowed(origin => 
-                origin.StartsWith("http://localhost") || 
+            policy.SetIsOriginAllowed(origin =>
+                origin.StartsWith("http://localhost:5173") ||
                 origin.Contains(".vercel.app")
             )
             .AllowAnyHeader()
